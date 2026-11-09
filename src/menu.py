@@ -9,7 +9,7 @@ def show_menu():
         print("1. Add Item: ")
         print("2. Remove Item: ")
         print("3. Show List: ")
-        print("4. New List: ")
+        print("4. Clear List: ")
         print("5. Close Shopping List: ")
         menu_selection = input("Make a selection: ")
         print("")
@@ -23,6 +23,7 @@ def show_menu():
             is_running = True
         elif menu_selection == "4":
             item_list.items.clear()
+            print("List cleared!")
         elif menu_selection == "5":
             print("Shopping List:")
             item_list.print_list()

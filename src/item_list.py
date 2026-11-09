@@ -10,9 +10,20 @@ def add_item():
             item["quantity"] += item_quantity
             print(f"Updated {item['name']}: now {item['quantity']} on your list.")
             return
+    while True:
+        try:
+            item_price = float(input("How much does it cost?: "))
+            break
+        except ValueError:
+            print("Invalid input.")  # makes sure the inputs are not strings
 
-    item_price = float(input("How much does it cost?: "))
-    item_quantity = int(input("How many?: "))
+    while True:
+        try:
+            item_quantity = int(input("How many?: "))
+            break
+        except ValueError:
+            print("Invalid input.")
+
     items.append(
         {
             "name": item_name,
