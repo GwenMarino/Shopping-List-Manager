@@ -11,7 +11,7 @@ def show_menu():
         print("3. Show List: ")
         print("4. Clear List: ")
         print("5. Close Shopping List: ")
-        menu_selection = input("Make a selection: ")
+        menu_selection = input("Make a selection (1-5): ")
         print("")
 
         if menu_selection == "1":
