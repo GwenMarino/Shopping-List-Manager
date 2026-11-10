@@ -3,7 +3,9 @@ items = []
 
 def add_item():
     item_name = input("Name of the item?: ").strip()
-
+    while item_name == "":
+        print("Invalid Input")
+        item_name = input("Name of the item?: ").strip()
     for item in items:  # only updates price if this item has not been listed before
         if item["name"].lower() == item_name.lower():
             item_quantity = int(input("How many?: "))
